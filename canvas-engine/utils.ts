@@ -9,8 +9,9 @@ export async function getExistingShapes(roomId: number) {
       {
         headers: {
           authorization:
-            "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjF9.RMfebNn3ViUE40wpF_u-tMK-5kmVYsB1uwuRYE9EJl8",
-        },
+            // "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjF9.RMfebNn3ViUE40wpF_u-tMK-5kmVYsB1uwuRYE9EJl8",
+            process.env.JWT_SECRET
+          },
       }
     );
     const messages = res.data.shapes;
